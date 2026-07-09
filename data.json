@@ -1,11 +1,26 @@
 [
   {
+    "name": "Markra",
+    "tagline": "一个markdown APP",
+    "logo": "https://github.com/user-attachments/assets/053cf528-2427-4034-af07-bbefc4b9df8b",
+    "url": "https://github.com/markrahq/markra",
+    "tags": [
+      "#markdown"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/2"
+  },
+  {
     "name": "Tree Identifier",
     "author": "treeidentifier",
     "tagline": "AI-powered tree identification from photos. Upload a picture of leaves, bark, or flowers and get instant species ID with field-guide notes. 10,000+ species covered.",
     "logo": "https://www.google.com/s2/favicons?domain=treeidentifier.org&sz=128",
     "url": "https://treeidentifier.org/",
-    "tags": ["#AI", "#explore", "#utility", "#interactive"],
+    "tags": [
+      "#AI",
+      "#explore",
+      "#utility",
+      "#interactive"
+    ],
     "source_issue": ""
   },
   {
@@ -14,18 +29,13 @@
     "tagline": "One menu bar app that replaces a whole stack of paid Mac utilities. Window switcher, system monitor, clipboard manager, file shelf, and more. Local-first, no telemetry.",
     "logo": "https://www.google.com/s2/favicons?domain=vorssaint.com&sz=128",
     "url": "https://github.com/vorssaint/vorssaint-utils",
-    "tags": ["#tool", "#utility", "#macOS", "#minimal"],
-    "source_issue": ""
-  },
-  {
-    "name": "Markra",
-    "tagline": "\u4e00\u4e2amarkdown APP",
-    "logo": "https://github.com/markrahq/markra/blob/main/apps/desktop/app-icon.svg",
-    "url": "https://github.com/markrahq/markra",
     "tags": [
-      "#markdown"
+      "#tool",
+      "#utility",
+      "#macOS",
+      "#minimal"
     ],
-    "source_issue": "https://github.com/cornradio/vibe-store/issues/2"
+    "source_issue": ""
   },
   {
     "name": "Win translator",
