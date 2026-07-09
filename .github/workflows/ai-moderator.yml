@@ -1,0 +1,39 @@
+name: AI Auto-Moderator
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  review:
+    if: contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install openai
+
+      - name: AI review and update
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/review.py
+
+      - name: Commit and push
+        if: success()
+        run: |
+          git config --global user.name "VibeStoreBot"
+          git config --global user.email "bot@vibestore.local"
+          git add data.json
+          git commit -m "New vibe app from issue #${{ github.event.issue.number }}" || exit 0
+          git push

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Midnight Radio",
+    "author": "vibe-dev",
+    "tagline": "Lo-fi beats streaming player for the 2AM coding sessions. Visualizer reacts to the music with generative pixel art.",
+    "logo": "",
+    "url": "https://example.github.io/midnight-radio",
+    "tags": ["#lo-fi", "#music", "#chill"],
+    "source_issue": ""
+  },
+  {
+    "name": "Dream Journal",
+    "author": "indie-soul",
+    "tagline": "Record your dreams with a surreal, morphing text interface. AI generates abstract art from your dream descriptions.",
+    "logo": "",
+    "url": "https://example.github.io/dream-journal",
+    "tags": ["#AI", "#healing", "#creative"],
+    "source_issue": ""
+  },
+  {
+    "name": "Breathe",
+    "author": "zen-coder",
+    "tagline": "Minimalist breathing exercise companion. Watch the circle expand and contract. Nothing else. That's the whole app.",
+    "logo": "",
+    "url": "https://example.github.io/breathe",
+    "tags": ["#minimal", "#wellness", "#chill"],
+    "source_issue": ""
+  },
+  {
+    "name": "Pixel Mood",
+    "author": "retro-vibes",
+    "tagline": "Pixel art mood board that changes its color palette based on the time of day and your local weather.",
+    "logo": "",
+    "url": "https://example.github.io/pixel-mood",
+    "tags": ["#pixel-art", "#creative", "#chill"],
+    "source_issue": ""
+  },
+  {
+    "name": "Neon Chat",
+    "author": "cyber-friend",
+    "tagline": "AI companion with cyberpunk personality. Talk about philosophy, music, or the meaning of life at 3AM.",
+    "logo": "",
+    "url": "https://example.github.io/neon-chat",
+    "tags": ["#AI", "#companion", "#cyberpunk"],
+    "source_issue": ""
+  },
+  {
+    "name": "Stargazer",
+    "author": "astro-vibe",
+    "tagline": "Real-time night sky rendered in your browser. Point your cursor at the stars and discover their stories.",
+    "logo": "",
+    "url": "https://example.github.io/stargazer",
+    "tags": ["#creative", "#ambient", "#explore"],
+    "source_issue": ""
+  }
+]
