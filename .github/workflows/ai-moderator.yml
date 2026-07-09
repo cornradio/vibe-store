@@ -2,15 +2,20 @@ name: AI Auto-Moderator
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   review:
     if: contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,13 +32,17 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/review.py
 
       - name: Commit and push
         if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "VibeStoreBot"
           git config --global user.email "bot@vibestore.local"
           git add data.json
           git commit -m "New vibe app from issue #${{ github.event.issue.number }}" || exit 0
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git push
