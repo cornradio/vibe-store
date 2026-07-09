@@ -581,6 +581,62 @@
     footer a { color: var(--accent-purple); text-decoration: none; }
     footer a:hover { color: var(--accent-pink); }
 
+    /* Sort Bar */
+    .sort-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 24px;
+    }
+
+    .sort-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .sort-btn {
+      padding: 4px 10px;
+      background: transparent;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .sort-btn:hover {
+      border-color: var(--accent-purple);
+      color: var(--text);
+    }
+
+    .sort-btn.active {
+      background: var(--accent-purple);
+      border-color: var(--accent-purple);
+      color: #fff;
+    }
+
+    /* Visit Count */
+    .card-visits {
+      font-size: 10px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-visits::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-purple);
+      opacity: 0.6;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .header-inner {
@@ -644,6 +700,12 @@
       </div>
       <div class="tag-filter" id="tag-filter"></div>
     </div>
+    <div class="sort-bar">
+      <span class="sort-label">sort:</span>
+      <button class="sort-btn active" data-sort="popular">Popular</button>
+      <button class="sort-btn" data-sort="newest">Newest</button>
+      <button class="sort-btn" data-sort="az">A-Z</button>
+    </div>
 
     <div id="loading">scanning the vibe signal...</div>
     <div id="empty-state">
@@ -690,6 +752,35 @@
     var allApps = [];
     var filteredApps = [];
     var activeTag = null;
+    var activeSort = 'popular';
+    var visitCounts = {};
+
+    // Free counter API (no key needed, GET-based)
+    var COUNTER_API = 'https://api.countapi.xyz';
+    var counterNs = (location.hostname + location.pathname).replace(/[^a-zA-Z0-9-]/g, '-');
+
+    function appKey(app) {
+      return btoa(app.url || '').replace(/[^a-zA-Z0-9]/g, '').substring(0, 24);
+    }
+
+    function trackVisit(app) {
+      var key = appKey(app);
+      fetch(COUNTER_API + '/hit/' + counterNs + '/' + key)
+        .then(function(r) { return r.json(); })
+        .then(function(d) { visitCounts[key] = d.value || 0; })
+        .catch(function() {});
+    }
+
+    function fetchVisitCounts() {
+      var promises = allApps.map(function(app) {
+        var key = appKey(app);
+        return fetch(COUNTER_API + '/get/' + counterNs + '/' + key)
+          .then(function(r) { return r.json(); })
+          .then(function(d) { visitCounts[key] = d.value || 0; })
+          .catch(function() { visitCounts[key] = 0; });
+      });
+      return Promise.all(promises);
+    }
 
     var gradients = [
       'linear-gradient(135deg, #a855f7, #ec4899)',
@@ -730,6 +821,9 @@
         return '<span class="card-tag">' + escapeHtml(t.replace(/^#/, '')) + '</span>';
       }).join('');
 
+      var visits = visitCounts[appKey(app)] || 0;
+      var visitsHtml = visits > 0 ? '<span class="card-visits">' + visits + ' visits</span>' : '';
+
       card.innerHTML =
         '<div class="card-top">' +
           '<div class="card-icon" style="' + iconStyle + '">' + iconInner + '</div>' +
@@ -741,11 +835,15 @@
         '<div class="card-desc">' + escapeHtml(app.tagline) + '</div>' +
         '<div class="card-tags">' + tagsHtml + '</div>' +
         '<div class="card-footer">' +
-          (app.source_issue
-            ? '<a class="card-issue-link" href="' + escapeHtml(app.source_issue) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()"># review</a>'
-            : '<span></span>') +
+          visitsHtml +
           '<a class="card-link" href="' + escapeHtml(app.url) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">Visit</a>' +
         '</div>';
+
+      // Track visit on link click
+      var visitLink = card.querySelector('.card-link');
+      if (visitLink) {
+        visitLink.addEventListener('click', function() { trackVisit(app); });
+      }
 
       return card;
     }
@@ -799,6 +897,18 @@
         return true;
       });
 
+      // Sort
+      if (activeSort === 'popular') {
+        filteredApps.sort(function(a, b) {
+          return (visitCounts[appKey(b)] || 0) - (visitCounts[appKey(a)] || 0);
+        });
+      } else if (activeSort === 'az') {
+        filteredApps.sort(function(a, b) {
+          return (a.name || '').localeCompare(b.name || '');
+        });
+      }
+      // 'newest' keeps the original data.json order (newest first)
+
       renderGrid(filteredApps);
     }
 
@@ -831,6 +941,12 @@
             : '') +
         '</div>';
 
+      // Track visit from modal
+      var modalVisit = content.querySelector('.modal-visit');
+      if (modalVisit) {
+        modalVisit.addEventListener('click', function() { trackVisit(app); });
+      }
+
       overlay.classList.add('open');
     }
 
@@ -849,13 +965,26 @@
     // --- Init ---
     document.getElementById('search-input').addEventListener('input', applyFilters);
 
+    // Sort buttons
+    document.querySelectorAll('.sort-btn').forEach(function(btn) {
+      btn.onclick = function() {
+        activeSort = btn.dataset.sort;
+        document.querySelectorAll('.sort-btn').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyFilters();
+      };
+    });
+
     fetch('data.json')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         allApps = Array.isArray(data) ? data : [];
+        return fetchVisitCounts().then(function() { return allApps; });
+      })
+      .then(function(data) {
         document.getElementById('loading').style.display = 'none';
         renderTags();
-        renderGrid(allApps);
+        applyFilters();
       })
       .catch(function() {
         document.getElementById('loading').style.display = 'none';
