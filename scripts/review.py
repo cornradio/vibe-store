@@ -27,9 +27,9 @@ def ai_review():
         from openai import OpenAI
         client = OpenAI(api_key=api_key, base_url=base_url)
 
-        prompt = f"""You are the editor of a vibe app store. This store only accepts indie web apps with soul -- apps focused on atmosphere, emotional value, AI companionship, creativity, healing, chill, cyberpunk, pixel art, or other unique vibes.
+        prompt = f"""You are the editor of a Vibe App Store. This store accepts ANY indie web app built through vibe coding -- tools, games, utilities, creative experiments, AI apps, dashboards, anything. The only requirement is that it's a real, working web app with some personality.
 
-Review the following submission. Judge whether it's a genuine vibe app or a boring/traditional/commercial tool.
+Review the following submission. Judge whether it's a genuine working web app or just spam/a broken placeholder.
 
 Submission:
 ---
@@ -37,7 +37,7 @@ Submission:
 ---
 
 Reply in JSON only, no other text:
-{{"is_vibe": true/false, "reason": "Your review comment in Chinese. Keep it cool and opinionated."}}"""
+{{"is_vibe": true/false, "reason": "Your review comment in Chinese. Be encouraging. Reject only obvious spam, broken links, or non-apps."}}"""
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",

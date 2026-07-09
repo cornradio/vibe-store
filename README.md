@@ -4,13 +4,17 @@ An AI-curated, GitHub-powered indie web app store. No server, no database, just 
 
 Developers submit apps via GitHub Issues. AI reviews submissions automatically. Approved apps appear on the site instantly.
 
-**[Live Demo](https://your-username.github.io/vibe-store/)**
+**[Live Demo](https://cornradio.github.io/vibe-store/)**
+
+## What's a Vibe App?
+
+Any indie web app built through vibe coding. Tools, games, utilities, creative experiments, AI companions, dashboards, retro projects, ambient experiences -- anything. If you coded it with vibe, it belongs here.
 
 ## How to Submit an App
 
 Anyone can submit a vibe app. It takes 30 seconds:
 
-1. Click the **"+ Submit App"** button on the [store page](https://your-username.github.io/vibe-store/)
+1. Click the **"+ Submit App"** button on the [store page](https://cornradio.github.io/vibe-store/)
 2. You'll be redirected to a GitHub Issue with a pre-filled template
 3. Fill in your app's name, description, logo URL, live demo URL, and vibe tags
 4. Submit the issue
@@ -19,20 +23,22 @@ That's it. An AI reviewer will evaluate your submission within minutes. If it fi
 
 ### What Gets Accepted
 
-The store accepts indie web apps with soul. Think:
+Anything vibe-coded. The store is open to all indie web apps:
 
-- AI companions and chat apps with personality
-- Lo-fi music players, ambient sound generators
-- Creative tools: pixel art, generative art, mood boards
-- Healing and wellness apps: breathing, journaling, meditation
-- Cyberpunk, retro, or uniquely styled utilities
-- Anything with a strong vibe that a traditional app store would reject
+- Tools and utilities (editors, calculators, converters)
+- Games (browser-based, casual, experimental)
+- AI apps (chat, companions, generators)
+- Creative projects (generative art, music, interactive)
+- Dashboards and visualizations
+- Retro or uniquely styled apps
+- Experiments and prototypes
+- Anything that runs in a browser
 
 ### What Gets Rejected
 
-- Generic business tools, dashboards, or CRUD apps
-- Apps that are just landing pages with no functionality
-- Submissions with broken or placeholder URLs
+- Broken links or placeholder pages
+- Obvious spam or scam sites
+- Non-web apps (native mobile/desktop without a web version)
 
 ### Tips for a Good Submission
 
