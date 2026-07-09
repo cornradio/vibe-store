@@ -140,6 +140,40 @@
       box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
     }
 
+    .header-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ai-prompt-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: transparent;
+      color: var(--accent-cyan);
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 1px;
+      border: 1px solid var(--accent-cyan);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .ai-prompt-btn:hover {
+      background: rgba(34, 211, 238, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .ai-prompt-btn.copied {
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+
     /* Hero */
     .hero {
       text-align: center;
@@ -682,6 +716,7 @@
       }
       #app-grid { grid-template-columns: 1fr; }
       .modal { padding: 24px; margin: 12px; }
+      .header-btns { width: 100%; justify-content: flex-start; }
     }
 
     @media (max-width: 480px) {
@@ -729,7 +764,10 @@
             </div>
           </div>
         </div>
-        <a id="submit-btn" href="#" target="_blank" rel="noopener" class="submit-btn">+ Submit App</a>
+        <div class="header-btns">
+          <button class="ai-prompt-btn" id="ai-prompt-btn" title="Copy a prompt you can paste into any AI agent to auto-submit apps">AI Submit</button>
+          <a id="submit-btn" href="#" target="_blank" rel="noopener" class="submit-btn">+ Submit App</a>
+        </div>
       </div>
     </div>
   </header>
@@ -784,7 +822,7 @@
         const repo = path.split('/')[1] || 'vibe-store';
         return { user: user, repo: repo, full: user + '/' + repo };
       }
-      return { user: 'YOUR_USERNAME', repo: 'vibe-store', full: 'YOUR_USERNAME/vibe-store' };
+      return { user: 'cornradio', repo: 'vibe-store', full: 'cornradio/vibe-store' };
     }
 
     var repoInfo = detectRepo();
@@ -793,6 +831,43 @@
       'https://github.com/' + repoInfo.full + '/issues/new?template=submit-app.md&labels=app-submission';
     document.getElementById('footer-repo').href =
       'https://github.com/' + repoInfo.full;
+
+    // --- AI Prompt Button ---
+    var aiPromptBtn = document.getElementById('ai-prompt-btn');
+    var AI_PROMPT = [
+      'You are submitting an app to the Vibe App Store.',
+      '',
+      'STEP 1: Find an indie web app to submit (e.g. from Product Hunt, V2EX, GitHub Trending, or any vibe-coded project).',
+      '',
+      'STEP 2: Create a GitHub Issue via the API:',
+      '',
+      'POST https://api.github.com/repos/' + repoInfo.full + '/issues',
+      '',
+      'Headers:',
+      '  Authorization: Bearer <your-github-token>',
+      '  Accept: application/vnd.github+json',
+      '',
+      'Body:',
+      '{',
+      '  "title": "[App] <App Name>",',
+      '  "labels": ["app-submission"],',
+      '  "body": "### App Name\\n\\n<App Name>\\n\\n### Tagline\\n\\n<One sentence: what does it do?>\\n\\n### Logo URL\\n\\n<image URL or paste an image anywhere below>\\n\\n### App URL\\n\\n<deployed URL>\\n\\n### Vibe Tags\\n\\n#tool #game #AI #creative #utility #retro #interactive"',
+      '}',
+      '',
+      'The AI reviewer auto-approves valid submissions. Spam, broken links, or non-web apps get rejected.',
+      'Full guide: https://github.com/' + repoInfo.full + '/blob/main/AI-SUBMIT.md'
+    ].join('\\n');
+
+    aiPromptBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText(AI_PROMPT).then(function() {
+        aiPromptBtn.textContent = 'Copied!';
+        aiPromptBtn.classList.add('copied');
+        setTimeout(function() {
+          aiPromptBtn.textContent = 'AI Submit';
+          aiPromptBtn.classList.remove('copied');
+        }, 2000);
+      });
+    });
 
     // --- State ---
     var allApps = [];
