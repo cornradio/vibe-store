@@ -1,5 +1,14 @@
 [
   {
+    "name": "Vorssaint Utils",
+    "author": "vorssaint",
+    "tagline": "One menu bar app that replaces a whole stack of paid Mac utilities. Window switcher, system monitor, clipboard manager, file shelf, and more. Local-first, no telemetry.",
+    "logo": "https://vorssaint.com/favicon.ico",
+    "url": "https://github.com/vorssaint/vorssaint-utils",
+    "tags": ["#tool", "#utility", "#macOS", "#minimal"],
+    "source_issue": ""
+  },
+  {
     "name": "Markra",
     "tagline": "一个markdown APP",
     "logo": "https://github.com/markrahq/markra/blob/main/apps/desktop/app-icon.svg",
