@@ -1,5 +1,15 @@
 [
   {
+    "name": "Win translator",
+    "tagline": "ai text genrator , translate or refine",
+    "logo": "https://github.com/user-attachments/assets/06570517-1314-49ea-9345-a0f2ca974407",
+    "url": "https://appstore.cornradio.org/?app=Win+translator+",
+    "tags": [
+      "#tool"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/1"
+  },
+  {
     "name": "Poolsuite",
     "author": "poolsuite",
     "tagline": "80s summer vacation simulator. Retro visuals, disco funk, VHS aesthetics. The internet's most stylish pool party.",
