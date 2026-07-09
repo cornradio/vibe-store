@@ -116,10 +116,23 @@ def main():
         # Parse tags
         tags = [t.strip() for t in tags_raw.split() if t.strip().startswith("#")]
 
+        # Auto-generate logo from Google favicon API if no logo provided
+        final_logo = ""
+        if logo and logo.startswith("http"):
+            final_logo = logo
+        elif url and url.startswith("http"):
+            from urllib.parse import urlparse
+            try:
+                domain = urlparse(url).netloc
+                if domain:
+                    final_logo = f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
+            except Exception:
+                pass
+
         new_app = {
             "name": name or f"VibeApp-{ISSUE_NUMBER}",
             "tagline": tagline or "A mysterious app radiating unique vibes.",
-            "logo": logo if logo and logo.startswith("http") else "",
+            "logo": final_logo,
             "url": url or "",
             "tags": tags or ["#vibe"],
             "source_issue": f"https://github.com/{REPO}/issues/{ISSUE_NUMBER}"
