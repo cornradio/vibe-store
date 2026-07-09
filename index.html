@@ -638,6 +638,31 @@
       opacity: 0.6;
     }
 
+    /* Header Logo Icon */
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: inline-block;
+      vertical-align: middle;
+      animation: wobble 3s ease-in-out infinite;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+    }
+
+    @keyframes wobble {
+      0%, 100% { transform: rotate(0deg); }
+      15% { transform: rotate(8deg); }
+      30% { transform: rotate(-6deg); }
+      45% { transform: rotate(4deg); }
+      60% { transform: rotate(-3deg); }
+      75% { transform: rotate(1deg); }
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .header-inner {
@@ -681,8 +706,28 @@
     <div class="container">
       <div class="header-inner">
         <div class="logo">
-          <h1>VIBE APP STORE</h1>
-          <div class="tagline">apps with soul</div>
+          <div class="logo-row">
+            <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="6" fill="#07070d"/>
+              <path d="M10 14 L10 26 Q10 27 11 27 L21 27 Q22 27 22 26 L22 14 Z" fill="#1a1a2e" stroke="#a855f7" stroke-width="1.2"/>
+              <path d="M8 13 L24 13" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M13 13 L13 11 Q13 10 14 10 L18 10 Q19 10 19 11 L19 13" fill="none" stroke="#ec4899" stroke-width="1.2"/>
+              <circle cx="14" cy="20" r="1.2" fill="#a855f7"/>
+              <circle cx="18" cy="20" r="1.2" fill="#a855f7"/>
+              <path d="M13.5 23 Q16 24.5 18.5 23" fill="none" stroke="#ec4899" stroke-width="1" stroke-linecap="round"/>
+              <path d="M6 6 L7 8 L6 10 L5 8 Z" fill="#22d3ee" opacity="0.9"/>
+              <path d="M25 4 L25.7 6 L25 8 L24.3 6 Z" fill="#ec4899" opacity="0.9"/>
+              <path d="M27 16 L27.5 17.5 L27 19 L26.5 17.5 Z" fill="#a855f7" opacity="0.8"/>
+              <text x="12" y="14.5" font-size="5" fill="#22d3ee" font-family="monospace" font-weight="bold">&lt;/&gt;</text>
+              <circle cx="20" cy="12" r="1.5" fill="#ec4899" opacity="0.7"/>
+              <circle cx="19.3" cy="11.5" r="0.4" fill="#fff"/>
+              <circle cx="20.7" cy="11.5" r="0.4" fill="#fff"/>
+            </svg>
+            <div>
+              <h1>VIBE APP STORE</h1>
+              <div class="tagline">apps with soul (or at least with vibe)</div>
+            </div>
+          </div>
         </div>
         <a id="submit-btn" href="#" target="_blank" rel="noopener" class="submit-btn">+ Submit App</a>
       </div>
