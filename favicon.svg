@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#07070d"/>
+
+  <!-- Trash can body -->
+  <path d="M10 14 L10 26 Q10 27 11 27 L21 27 Q22 27 22 26 L22 14 Z" fill="#1a1a2e" stroke="#a855f7" stroke-width="1.2"/>
+
+  <!-- Trash can lid -->
+  <path d="M8 13 L24 13" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M13 13 L13 11 Q13 10 14 10 L18 10 Q19 10 19 11 L19 13" fill="none" stroke="#ec4899" stroke-width="1.2"/>
+
+  <!-- Cute face on trash can -->
+  <circle cx="14" cy="20" r="1.2" fill="#a855f7"/>
+  <circle cx="18" cy="20" r="1.2" fill="#a855f7"/>
+  <path d="M13.5 23 Q16 24.5 18.5 23" fill="none" stroke="#ec4899" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Sparkles / stars (the "slop" is ✨special✨) -->
+  <path d="M6 6 L7 8 L6 10 L5 8 Z" fill="#22d3ee" opacity="0.9"/>
+  <path d="M25 4 L25.7 6 L25 8 L24.3 6 Z" fill="#ec4899" opacity="0.9"/>
+  <path d="M27 16 L27.5 17.5 L27 19 L26.5 17.5 Z" fill="#a855f7" opacity="0.8"/>
+
+  <!-- Random slop peeking out -->
+  <!-- Code bracket -->
+  <text x="12" y="14.5" font-size="5" fill="#22d3ee" font-family="monospace" font-weight="bold">&lt;/&gt;</text>
+  <!-- Tiny game controller shape -->
+  <circle cx="20" cy="12" r="1.5" fill="#ec4899" opacity="0.7"/>
+  <circle cx="19.3" cy="11.5" r="0.4" fill="#fff"/>
+  <circle cx="20.7" cy="11.5" r="0.4" fill="#fff"/>
+</svg>
