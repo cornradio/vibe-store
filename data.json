@@ -3,180 +3,280 @@
     "name": "Poolsuite",
     "author": "poolsuite",
     "tagline": "80s summer vacation simulator. Retro visuals, disco funk, VHS aesthetics. The internet's most stylish pool party.",
-    "logo": "",
+    "logo": "https://poolsuite.net/favicon.ico",
     "url": "https://poolsuite.net/",
-    "tags": ["#retro", "#music", "#vibe", "#creative"],
+    "tags": [
+      "#retro",
+      "#music",
+      "#vibe",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "Silk",
     "author": "weavesilk",
     "tagline": "Interactive generative art. Draw with light and symmetry. Every stroke creates a unique, mesmerizing pattern. Zero skill required.",
-    "logo": "",
+    "logo": "http://weavesilk.com/favicon.ico",
     "url": "http://weavesilk.com/",
-    "tags": ["#creative", "#art", "#interactive", "#chill"],
+    "tags": [
+      "#creative",
+      "#art",
+      "#interactive",
+      "#chill"
+    ],
     "source_issue": ""
   },
   {
     "name": "Patatap",
     "author": "patatap",
     "tagline": "Visual + sound instrument. Tap any key, get a beautiful animation and tone. A portable animation and sound kit in your browser.",
-    "logo": "",
+    "logo": "https://patatap.com/favicon.ico",
     "url": "https://patatap.com/",
-    "tags": ["#interactive", "#art", "#music", "#creative"],
+    "tags": [
+      "#interactive",
+      "#art",
+      "#music",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "Window Swap",
     "author": "window-swap",
     "tagline": "Look out of someone else's window. Real video views from real people around the world. Quiet, beautiful, human.",
-    "logo": "",
+    "logo": "https://www.window-swap.com/favicon.ico",
     "url": "https://www.window-swap.com/",
-    "tags": ["#healing", "#explore", "#vibe", "#ambient"],
+    "tags": [
+      "#healing",
+      "#explore",
+      "#vibe",
+      "#ambient"
+    ],
     "source_issue": ""
   },
   {
     "name": "Drive & Listen",
     "author": "driveandlisten",
     "tagline": "Drive through any city with local radio. Tokyo at night, Paris in the rain, LA at sunset. Just pick a city and go.",
-    "logo": "",
+    "logo": "https://driveandlisten.herokuapp.com/favicon.ico",
     "url": "https://driveandlisten.herokuapp.com/",
-    "tags": ["#explore", "#music", "#ambient", "#vibe"],
+    "tags": [
+      "#explore",
+      "#music",
+      "#ambient",
+      "#vibe"
+    ],
     "source_issue": ""
   },
   {
     "name": "Radio Garden",
     "author": "radio-garden",
     "tagline": "Spin the 3D globe and tune into live radio from anywhere on Earth. Thousands of stations, one interactive planet.",
-    "logo": "",
+    "logo": "http://radio.garden/favicon.ico",
     "url": "http://radio.garden/",
-    "tags": ["#explore", "#music", "#interactive", "#creative"],
+    "tags": [
+      "#explore",
+      "#music",
+      "#interactive",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "Character.AI",
     "author": "character-ai",
     "tagline": "Talk to AI characters with distinct personalities. Philosophers, anime characters, historical figures. Or create your own companion.",
-    "logo": "",
+    "logo": "https://character.ai/favicon.ico",
     "url": "https://character.ai/",
-    "tags": ["#AI", "#companion", "#creative", "#vibe"],
+    "tags": [
+      "#AI",
+      "#companion",
+      "#creative",
+      "#vibe"
+    ],
     "source_issue": ""
   },
   {
     "name": "Slow Roads",
     "author": "slow-roads",
     "tagline": "Procedurally generated driving game. Endless landscapes, no destination, no score. Just you, the road, and the scenery.",
-    "logo": "",
+    "logo": "https://slowroads.io/favicon.ico",
     "url": "https://slowroads.io/",
-    "tags": ["#game", "#ambient", "#vibe", "#explore"],
+    "tags": [
+      "#game",
+      "#ambient",
+      "#vibe",
+      "#explore"
+    ],
     "source_issue": ""
   },
   {
     "name": "Pixelarium",
     "author": "pixelarium",
     "tagline": "Free online pixel art editor. Create retro-style sprites, animations, and scenes directly in your browser. No install, no account.",
-    "logo": "",
+    "logo": "https://www.pixelarium.studio/favicon.ico",
     "url": "https://www.pixelarium.studio/",
-    "tags": ["#pixel-art", "#creative", "#retro", "#art"],
+    "tags": [
+      "#pixel-art",
+      "#creative",
+      "#retro",
+      "#art"
+    ],
     "source_issue": ""
   },
   {
     "name": "Moodist",
     "author": "moodist",
     "tagline": "Open-source ambient sound mixer. Blend rain, cafe chatter, fire crackle. Free, no ads, no account. Just focus.",
-    "logo": "",
+    "logo": "https://moodist.mvze.net/favicon.ico",
     "url": "https://moodist.mvze.net/",
-    "tags": ["#ambient", "#chill", "#wellness", "#minimal"],
+    "tags": [
+      "#ambient",
+      "#chill",
+      "#wellness",
+      "#minimal"
+    ],
     "source_issue": ""
   },
   {
     "name": "IT Tools",
     "author": "corentin-thomasset",
     "tagline": "70+ handy online tools for developers. JWT decoder, hash generator, cron parser, UUID generator, base64, and more. All in one clean UI.",
-    "logo": "",
+    "logo": "https://it-tools.tech/favicon.ico",
     "url": "https://it-tools.tech/",
-    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#creative",
+      "#minimal"
+    ],
     "source_issue": ""
   },
   {
     "name": "Carbon",
     "author": "carbon-app",
     "tagline": "Create beautiful code screenshots. Pick a theme, choose a language, export as PNG. The standard for sharing code on social media.",
-    "logo": "",
+    "logo": "https://carbon.now.sh/favicon.ico",
     "url": "https://carbon.now.sh/",
-    "tags": ["#tool", "#creative", "#utility", "#art"],
+    "tags": [
+      "#tool",
+      "#creative",
+      "#utility",
+      "#art"
+    ],
     "source_issue": ""
   },
   {
     "name": "tldraw",
     "author": "tldraw",
     "tagline": "Infinite canvas for sketching, diagramming, and prototyping. Hand-drawn style with smart snapping. The whiteboard you actually want to use.",
-    "logo": "",
+    "logo": "https://www.tldraw.com/favicon.ico",
     "url": "https://www.tldraw.com/",
-    "tags": ["#creative", "#tool", "#interactive", "#art"],
+    "tags": [
+      "#creative",
+      "#tool",
+      "#interactive",
+      "#art"
+    ],
     "source_issue": ""
   },
   {
     "name": "Excalidraw",
     "author": "excalidraw",
     "tagline": "Virtual whiteboard with a hand-drawn feel. Sketch diagrams, flowcharts, wireframes. Open-source, end-to-end encrypted.",
-    "logo": "",
+    "logo": "https://excalidraw.com/favicon.ico",
     "url": "https://excalidraw.com/",
-    "tags": ["#tool", "#creative", "#interactive", "#art"],
+    "tags": [
+      "#tool",
+      "#creative",
+      "#interactive",
+      "#art"
+    ],
     "source_issue": ""
   },
   {
     "name": "Squoosh",
     "author": "GoogleChromeLabs",
     "tagline": "Image compression in your browser. Compare codecs side-by-side, tweak quality sliders, see results in real-time. No upload needed.",
-    "logo": "",
+    "logo": "https://squoosh.app/favicon.ico",
     "url": "https://squoosh.app/",
-    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#creative",
+      "#minimal"
+    ],
     "source_issue": ""
   },
   {
     "name": "Hoppscotch",
     "author": "hoppscotch",
     "tagline": "Open-source API development ecosystem. Test REST, GraphQL, WebSocket, and more. The lightweight Postman alternative that runs in your browser.",
-    "logo": "",
+    "logo": "https://hoppscotch.io/favicon.ico",
     "url": "https://hoppscotch.io/",
-    "tags": ["#tool", "#utility", "#interactive", "#creative"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#interactive",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "JSON Hero",
     "author": "triggerdotdev",
     "tagline": "Beautiful JSON explorer. Paste any JSON and get a clean, navigable view with type inference, path copying, and keyboard shortcuts.",
-    "logo": "",
+    "logo": "https://jsonhero.io/favicon.ico",
     "url": "https://jsonhero.io/",
-    "tags": ["#tool", "#utility", "#minimal", "#creative"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#minimal",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "Ray.so",
     "author": "raycast",
     "tagline": "Turn code into beautiful images. Syntax highlighting, custom themes, export in multiple sizes. The code screenshot tool for pros.",
-    "logo": "",
+    "logo": "https://ray.so/favicon.ico",
     "url": "https://ray.so/",
-    "tags": ["#tool", "#creative", "#art", "#utility"],
+    "tags": [
+      "#tool",
+      "#creative",
+      "#art",
+      "#utility"
+    ],
     "source_issue": ""
   },
   {
     "name": "Regex101",
     "author": "firasdib",
     "tagline": "Build, test, and debug regular expressions. Real-time matching, explanation, and a community library of user-submitted patterns.",
-    "logo": "",
+    "logo": "https://regex101.com/favicon.ico",
     "url": "https://regex101.com/",
-    "tags": ["#tool", "#utility", "#interactive", "#creative"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#interactive",
+      "#creative"
+    ],
     "source_issue": ""
   },
   {
     "name": "Stirling-PDF",
     "author": "Stirling-Tools",
     "tagline": "Self-hosted PDF manipulation hub. Merge, split, convert, compress, watermark, OCR -- 40+ operations in one clean interface.",
-    "logo": "",
+    "logo": "https://stirling-pdf.com/favicon.ico",
     "url": "https://stirling-pdf.com/",
-    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "tags": [
+      "#tool",
+      "#utility",
+      "#creative",
+      "#minimal"
+    ],
     "source_issue": ""
   }
 ]
