@@ -101,6 +101,18 @@ def main():
         url = extract_field("App URL")
         tags_raw = extract_field("Vibe Tags")
 
+        # If logo field is empty, grab the first image from anywhere in the issue
+        if not logo or not logo.startswith("http"):
+            # Try markdown image: ![alt](url)
+            img_match = re.search(r"!\[.*?\]\((https?://[^\s\)]+)\)", ISSUE_BODY)
+            if img_match:
+                logo = img_match.group(1)
+            else:
+                # Try HTML img tag: <img src="url">
+                img_match = re.search(r'<img[^>]+src=["\']?(https?://[^\s"\'>]+)', ISSUE_BODY)
+                if img_match:
+                    logo = img_match.group(1)
+
         # Parse tags
         tags = [t.strip() for t in tags_raw.split() if t.strip().startswith("#")]
 

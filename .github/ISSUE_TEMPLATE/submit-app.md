@@ -18,7 +18,7 @@ assignees: []
 
 ### Logo URL
 
-<!-- Image URL for your app icon. Drag and drop an image here to auto-generate a GitHub link, or paste any image URL -->
+<!-- Paste an image URL, or drag & drop an image anywhere in this issue. The first image will be auto-detected as your app icon. -->
 
 
 ### App URL

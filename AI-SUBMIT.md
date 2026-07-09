@@ -38,8 +38,12 @@ Accept: application/vnd.github+json
 
 ### Optional Fields
 
-- **Logo URL**: Image URL. Leave empty for auto-generated gradient icon.
+- **Logo URL**: Image URL. Leave empty and include any image in the issue body -- the first image will be auto-detected as the app icon.
 - **Author**: GitHub username or display name
+
+### Auto Icon Detection
+
+If the Logo URL field is empty, the system scans the entire issue body for the first image (markdown `![alt](url)` or HTML `<img src="url">`) and uses it as the app icon. When submitting via API, you can put an image markdown link anywhere in the body.
 
 ### Example (curl)
 
