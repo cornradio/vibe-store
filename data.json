@@ -88,5 +88,95 @@
     "url": "https://moodist.mvze.net/",
     "tags": ["#ambient", "#chill", "#wellness", "#minimal"],
     "source_issue": ""
+  },
+  {
+    "name": "IT Tools",
+    "author": "corentin-thomasset",
+    "tagline": "70+ handy online tools for developers. JWT decoder, hash generator, cron parser, UUID generator, base64, and more. All in one clean UI.",
+    "logo": "",
+    "url": "https://it-tools.tech/",
+    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "source_issue": ""
+  },
+  {
+    "name": "Carbon",
+    "author": "carbon-app",
+    "tagline": "Create beautiful code screenshots. Pick a theme, choose a language, export as PNG. The standard for sharing code on social media.",
+    "logo": "",
+    "url": "https://carbon.now.sh/",
+    "tags": ["#tool", "#creative", "#utility", "#art"],
+    "source_issue": ""
+  },
+  {
+    "name": "tldraw",
+    "author": "tldraw",
+    "tagline": "Infinite canvas for sketching, diagramming, and prototyping. Hand-drawn style with smart snapping. The whiteboard you actually want to use.",
+    "logo": "",
+    "url": "https://www.tldraw.com/",
+    "tags": ["#creative", "#tool", "#interactive", "#art"],
+    "source_issue": ""
+  },
+  {
+    "name": "Excalidraw",
+    "author": "excalidraw",
+    "tagline": "Virtual whiteboard with a hand-drawn feel. Sketch diagrams, flowcharts, wireframes. Open-source, end-to-end encrypted.",
+    "logo": "",
+    "url": "https://excalidraw.com/",
+    "tags": ["#tool", "#creative", "#interactive", "#art"],
+    "source_issue": ""
+  },
+  {
+    "name": "Squoosh",
+    "author": "GoogleChromeLabs",
+    "tagline": "Image compression in your browser. Compare codecs side-by-side, tweak quality sliders, see results in real-time. No upload needed.",
+    "logo": "",
+    "url": "https://squoosh.app/",
+    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "source_issue": ""
+  },
+  {
+    "name": "Hoppscotch",
+    "author": "hoppscotch",
+    "tagline": "Open-source API development ecosystem. Test REST, GraphQL, WebSocket, and more. The lightweight Postman alternative that runs in your browser.",
+    "logo": "",
+    "url": "https://hoppscotch.io/",
+    "tags": ["#tool", "#utility", "#interactive", "#creative"],
+    "source_issue": ""
+  },
+  {
+    "name": "JSON Hero",
+    "author": "triggerdotdev",
+    "tagline": "Beautiful JSON explorer. Paste any JSON and get a clean, navigable view with type inference, path copying, and keyboard shortcuts.",
+    "logo": "",
+    "url": "https://jsonhero.io/",
+    "tags": ["#tool", "#utility", "#minimal", "#creative"],
+    "source_issue": ""
+  },
+  {
+    "name": "Ray.so",
+    "author": "raycast",
+    "tagline": "Turn code into beautiful images. Syntax highlighting, custom themes, export in multiple sizes. The code screenshot tool for pros.",
+    "logo": "",
+    "url": "https://ray.so/",
+    "tags": ["#tool", "#creative", "#art", "#utility"],
+    "source_issue": ""
+  },
+  {
+    "name": "Regex101",
+    "author": "firasdib",
+    "tagline": "Build, test, and debug regular expressions. Real-time matching, explanation, and a community library of user-submitted patterns.",
+    "logo": "",
+    "url": "https://regex101.com/",
+    "tags": ["#tool", "#utility", "#interactive", "#creative"],
+    "source_issue": ""
+  },
+  {
+    "name": "Stirling-PDF",
+    "author": "Stirling-Tools",
+    "tagline": "Self-hosted PDF manipulation hub. Merge, split, convert, compress, watermark, OCR -- 40+ operations in one clean interface.",
+    "logo": "",
+    "url": "https://stirling-pdf.com/",
+    "tags": ["#tool", "#utility", "#creative", "#minimal"],
+    "source_issue": ""
   }
 ]
