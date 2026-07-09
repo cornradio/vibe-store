@@ -2,11 +2,16 @@ name: AI Auto-Moderator
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened, labeled, edited]
 
 jobs:
   review:
-    if: contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]')
+    if: |
+      (contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]')) &&
+      (
+        github.event.action != 'edited' ||
+        contains(github.event.issue.labels.*.name, 'approved')
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -43,6 +48,6 @@ jobs:
           git config --global user.name "VibeStoreBot"
           git config --global user.email "bot@vibestore.local"
           git add data.json
-          git commit -m "New vibe app from issue #${{ github.event.issue.number }}" || exit 0
+          git commit -m "Update vibe app from issue #${{ github.event.issue.number }}" || exit 0
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git push
