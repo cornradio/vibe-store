@@ -1,5 +1,16 @@
 [
   {
+    "name": "cftunnel_manager.sh",
+    "tagline": "轻松的创建cloud flare tunnel。",
+    "logo": "https://github.com/user-attachments/assets/ca24da66-dec6-4213-b55e-e5faf798ff23",
+    "url": "https://gist.github.com/cornradio/c3d59c9ccf2ccbbdb2d1114cc85f589f",
+    "tags": [
+      "#script",
+      "#linux"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/3"
+  },
+  {
     "name": "Markra",
     "tagline": "一个markdown APP",
     "logo": "https://github.com/user-attachments/assets/053cf528-2427-4034-af07-bbefc4b9df8b",
