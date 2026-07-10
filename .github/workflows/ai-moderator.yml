@@ -2,15 +2,16 @@ name: AI Auto-Moderator
 
 on:
   issues:
-    types: [opened, labeled, edited]
+    types: [opened, labeled, unlabeled, edited]
 
 jobs:
   review:
     if: |
-      (contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]')) &&
       (
-        github.event.action != 'edited' ||
-        contains(github.event.issue.labels.*.name, 'approved')
+        (github.event.action == 'labeled' && github.event.label.name == 'approved') ||
+        (github.event.action == 'unlabeled' && github.event.label.name == 'approved') ||
+        (github.event.action == 'opened' && (contains(github.event.issue.labels.*.name, 'app-submission') || startsWith(github.event.issue.title, '[App]'))) ||
+        (github.event.action == 'edited' && contains(github.event.issue.labels.*.name, 'approved'))
       )
     runs-on: ubuntu-latest
     permissions:
@@ -36,6 +37,7 @@ jobs:
           OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_ACTION: ${{ github.event.action }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/review.py

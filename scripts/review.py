@@ -12,6 +12,7 @@ import subprocess
 ISSUE_BODY = os.environ["ISSUE_BODY"]
 ISSUE_NUMBER = os.environ["ISSUE_NUMBER"]
 REPO = os.environ["GITHUB_REPOSITORY"]
+ISSUE_ACTION = os.environ.get("ISSUE_ACTION", "")
 
 # --- AI Review ---
 def ai_review():
@@ -89,6 +90,37 @@ def gh_close():
 
 # --- Main ---
 def main():
+    data_path = "data.json"
+
+    # --- Handle removal: unlabeled 'approved' means remove from store ---
+    if ISSUE_ACTION == "unlabeled":
+        issue_url = f"https://github.com/{REPO}/issues/{ISSUE_NUMBER}"
+
+        if os.path.exists(data_path):
+            with open(data_path, "r", encoding="utf-8") as f:
+                try:
+                    data = json.load(f)
+                except json.JSONDecodeError:
+                    data = []
+        else:
+            data = []
+
+        if not isinstance(data, list):
+            data = []
+
+        original_len = len(data)
+        data = [item for item in data if item.get("source_issue") != issue_url]
+
+        if len(data) < original_len:
+            with open(data_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            gh_comment("**App removed from store.** You can re-add it by adding the `approved` label back.")
+            print(f"Removed app from issue #{ISSUE_NUMBER}")
+        else:
+            print(f"No matching app found for issue #{ISSUE_NUMBER}, nothing to remove.")
+        return
+
+    # --- Normal flow: review and add/update ---
     result = ai_review()
     is_vibe = result.get("is_vibe", True)
     reason = result.get("reason", "")
