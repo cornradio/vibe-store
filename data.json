@@ -1,5 +1,16 @@
 [
   {
+    "name": "slowroads",
+    "tagline": "在线开车",
+    "logo": "https://github.com/user-attachments/assets/49f10b06-44de-4e09-aadf-7043bed83589",
+    "url": "https://slowroads.io/",
+    "tags": [
+      "#game",
+      "#chill"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/8"
+  },
+  {
     "name": "terraink",
     "tagline": "创建地图海报：把去过的地方，变成一张可以挂在墙上的地图",
     "logo": "https://github.com/user-attachments/assets/cdaeb8e7-5ed2-4f0a-97e7-6acc34c793b6",
@@ -195,20 +206,6 @@
       "#companion",
       "#creative",
       "#vibe"
-    ],
-    "source_issue": ""
-  },
-  {
-    "name": "Slow Roads",
-    "author": "slow-roads",
-    "tagline": "Procedurally generated driving game. Endless landscapes, no destination, no score. Just you, the road, and the scenery.",
-    "logo": "https://www.google.com/s2/favicons?domain=slowroads.io&sz=128",
-    "url": "https://slowroads.io/",
-    "tags": [
-      "#game",
-      "#ambient",
-      "#vibe",
-      "#explore"
     ],
     "source_issue": ""
   },
