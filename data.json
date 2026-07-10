@@ -1,5 +1,16 @@
 [
   {
+    "name": "flow pick",
+    "tagline": "一个免费开源不用开F12，就能“Pick”页面上所有视频/音频/图片的嗅探器",
+    "logo": "https://github.com/user-attachments/assets/985f8e77-b683-483a-a431-2d0a289cc55c",
+    "url": "https://meta.appinn.net/t/topic/87623#p-330200-h-8",
+    "tags": [
+      "#utility",
+      "#art"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/6"
+  },
+  {
     "name": "二牛汉字编码定位 Geohanzi",
     "tagline": "用4个常用汉字编码你的位置！",
     "logo": "https://raw.githubusercontent.com/erniu3/geo-hanzi/refs/heads/master/icon-512.png",
