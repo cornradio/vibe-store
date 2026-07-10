@@ -339,19 +339,5 @@
       "#creative"
     ],
     "source_issue": ""
-  },
-  {
-    "name": "Stirling-PDF",
-    "author": "Stirling-Tools",
-    "tagline": "Self-hosted PDF manipulation hub. Merge, split, convert, compress, watermark, OCR -- 40+ operations in one clean interface.",
-    "logo": "https://www.google.com/s2/favicons?domain=stirling-pdf.com&sz=128",
-    "url": "https://stirling-pdf.com/",
-    "tags": [
-      "#tool",
-      "#utility",
-      "#creative",
-      "#minimal"
-    ],
-    "source_issue": ""
   }
 ]
