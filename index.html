@@ -709,25 +709,6 @@
       color: #fff;
     }
 
-    /* Visit Count */
-    .card-visits {
-      font-size: 10px;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .card-visits::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent-purple);
-      opacity: 0.6;
-    }
-
     /* Header Logo Icon */
     .logo-icon {
       width: 42px;
@@ -912,8 +893,7 @@
     </div>
     <div class="sort-bar">
       <span class="sort-label">sort:</span>
-      <button class="sort-btn active" data-sort="popular">Popular</button>
-      <button class="sort-btn" data-sort="newest">Newest</button>
+      <button class="sort-btn active" data-sort="newest">Newest</button>
       <button class="sort-btn" data-sort="az">A-Z</button>
     </div>
 
@@ -1018,38 +998,7 @@
     var allApps = [];
     var filteredApps = [];
     var activeTag = null;
-    var activeSort = 'popular';
-    var visitCounts = {};
-
-    // Free counter API (no key needed, GET-based)
-    var COUNTER_API = 'https://api.countapi.xyz';
-    var counterNs = (location.hostname + location.pathname).replace(/[^a-zA-Z0-9-]/g, '-');
-
-    function appKey(app) {
-      return btoa(app.url || '').replace(/[^a-zA-Z0-9]/g, '').substring(0, 24);
-    }
-
-    function trackVisit(app) {
-      var key = appKey(app);
-      fetch(COUNTER_API + '/hit/' + counterNs + '/' + key)
-        .then(function(r) { return r.json(); })
-        .then(function(d) { visitCounts[key] = d.value || 0; })
-        .catch(function() {});
-    }
-
-    function fetchVisitCounts() {
-      var promises = allApps.map(function(app) {
-        var key = appKey(app);
-        return Promise.race([
-          fetch(COUNTER_API + '/get/' + counterNs + '/' + key)
-            .then(function(r) { return r.json(); })
-            .then(function(d) { visitCounts[key] = d.value || 0; })
-            .catch(function() { visitCounts[key] = 0; }),
-          new Promise(function(resolve) { setTimeout(resolve, 3000); })
-        ]);
-      });
-      return Promise.all(promises);
-    }
+    var activeSort = 'newest';
 
     var gradients = [
       'linear-gradient(135deg, #a855f7, #ec4899)',
@@ -1090,9 +1039,6 @@
         return '<span class="card-tag">' + escapeHtml(t.replace(/^#/, '')) + '</span>';
       }).join('');
 
-      var visits = visitCounts[appKey(app)] || 0;
-      var visitsHtml = visits > 0 ? '<span class="card-visits">' + visits + ' visits</span>' : '';
-
       card.innerHTML =
         '<div class="card-top">' +
           '<div class="card-icon" style="' + iconStyle + '">' + iconInner + '</div>' +
@@ -1104,15 +1050,8 @@
         '<div class="card-desc">' + escapeHtml(app.tagline) + '</div>' +
         '<div class="card-tags">' + tagsHtml + '</div>' +
         '<div class="card-footer">' +
-          visitsHtml +
           '<a class="card-link" href="' + escapeHtml(app.url) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()">Visit</a>' +
         '</div>';
-
-      // Track visit on link click
-      var visitLink = card.querySelector('.card-link');
-      if (visitLink) {
-        visitLink.addEventListener('click', function() { trackVisit(app); });
-      }
 
       return card;
     }
@@ -1167,11 +1106,7 @@
       });
 
       // Sort
-      if (activeSort === 'popular') {
-        filteredApps.sort(function(a, b) {
-          return (visitCounts[appKey(b)] || 0) - (visitCounts[appKey(a)] || 0);
-        });
-      } else if (activeSort === 'az') {
+      if (activeSort === 'az') {
         filteredApps.sort(function(a, b) {
           return (a.name || '').localeCompare(b.name || '');
         });
@@ -1251,10 +1186,6 @@
         document.getElementById('loading').style.display = 'none';
         renderTags();
         applyFilters();
-        // Fetch visit counts in background, re-render when done
-        fetchVisitCounts().then(function() {
-          applyFilters();
-        });
       })
       .catch(function() {
         document.getElementById('loading').style.display = 'none';
