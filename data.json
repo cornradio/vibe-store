@@ -1,5 +1,22 @@
 [
   {
+    "name": "Octavia Cambiare",
+    "tagline": "A customisable visualiser dashboard powered by a polyglot MIDI runtime. Supports many legendary synthesizers.",
+    "logo": "https://www.google.com/s2/favicons?domain=gh.ltgc.cc&sz=128",
+    "url": "https://gh.ltgc.cc/octavia/test/cambiare.htm",
+    "tags": [
+      "#tool",
+      "#creative",
+      "#utility",
+      "#interactive",
+      "#music",
+      "#art",
+      "#MIDI",
+      "#non-AI"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/9"
+  },
+  {
     "name": "slowroads",
     "tagline": "在线开车",
     "logo": "https://github.com/user-attachments/assets/49f10b06-44de-4e09-aadf-7043bed83589",
