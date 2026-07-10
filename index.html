@@ -1040,10 +1040,13 @@
     function fetchVisitCounts() {
       var promises = allApps.map(function(app) {
         var key = appKey(app);
-        return fetch(COUNTER_API + '/get/' + counterNs + '/' + key)
-          .then(function(r) { return r.json(); })
-          .then(function(d) { visitCounts[key] = d.value || 0; })
-          .catch(function() { visitCounts[key] = 0; });
+        return Promise.race([
+          fetch(COUNTER_API + '/get/' + counterNs + '/' + key)
+            .then(function(r) { return r.json(); })
+            .then(function(d) { visitCounts[key] = d.value || 0; })
+            .catch(function() { visitCounts[key] = 0; }),
+          new Promise(function(resolve) { setTimeout(resolve, 3000); })
+        ]);
       });
       return Promise.all(promises);
     }
@@ -1245,12 +1248,13 @@
       .then(function(r) { return r.json(); })
       .then(function(data) {
         allApps = Array.isArray(data) ? data : [];
-        return fetchVisitCounts().then(function() { return allApps; });
-      })
-      .then(function(data) {
         document.getElementById('loading').style.display = 'none';
         renderTags();
         applyFilters();
+        // Fetch visit counts in background, re-render when done
+        fetchVisitCounts().then(function() {
+          applyFilters();
+        });
       })
       .catch(function() {
         document.getElementById('loading').style.display = 'none';

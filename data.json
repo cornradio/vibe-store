@@ -168,20 +168,6 @@
     "source_issue": ""
   },
   {
-    "name": "Drive & Listen",
-    "author": "driveandlisten",
-    "tagline": "Drive through any city with local radio. Tokyo at night, Paris in the rain, LA at sunset. Just pick a city and go.",
-    "logo": "https://www.google.com/s2/favicons?domain=driveandlisten.herokuapp.com&sz=128",
-    "url": "https://driveandlisten.herokuapp.com/",
-    "tags": [
-      "#explore",
-      "#music",
-      "#ambient",
-      "#vibe"
-    ],
-    "source_issue": ""
-  },
-  {
     "name": "Radio Garden",
     "author": "radio-garden",
     "tagline": "Spin the 3D globe and tune into live radio from anywhere on Earth. Thousands of stations, one interactive planet.",
