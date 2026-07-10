@@ -400,7 +400,7 @@
     .card-name {
       font-size: 16px;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -555,7 +555,7 @@
     .modal-name {
       font-size: 24px;
       font-weight: 800;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 6px;
     }
 
@@ -789,9 +789,75 @@
     ::-webkit-scrollbar-thumb:hover {
       background: rgba(120, 80, 200, 0.5);
     }
+
+    /* Cursor Glow */
+    .cursor-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, rgba(236, 72, 153, 0.03) 40%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s;
+      opacity: 0;
+    }
+
+    .cursor-glow.visible { opacity: 1; }
+
+    [data-theme="light"] .cursor-glow {
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.04) 40%, transparent 70%);
+    }
+
+    /* Card Spotlight (border follows mouse) */
+    .card {
+      --mouse-x: 50%;
+      --mouse-y: 50%;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius);
+      background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(168, 85, 247, 0.15),
+        transparent 40%
+      );
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card:hover::after { opacity: 1; }
+
+    [data-theme="light"] .card::after {
+      background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(139, 92, 246, 0.1),
+        transparent 40%
+      );
+    }
+
+    /* Card > * needs to be above the ::after overlay */
+    .card > * { position: relative; z-index: 1; }
+
+    /* Card 3D tilt */
+    .card {
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
+
+    .card:hover {
+      transform: translateY(-3px) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg));
+    }
   </style>
 </head>
 <body>
+  <div class="cursor-glow" id="cursor-glow"></div>
 
   <header>
     <div class="container">
@@ -1192,6 +1258,58 @@
         document.getElementById('empty-state').querySelector('p').textContent =
           'Store is ready. Waiting for the first vibe app.';
       });
+  </script>
+
+  <script>
+    // --- Interactive Effects ---
+    (function() {
+      var glow = document.getElementById('cursor-glow');
+      var ticking = false;
+
+      // Cursor glow follows mouse
+      document.addEventListener('mousemove', function(e) {
+        if (!ticking) {
+          requestAnimationFrame(function() {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+            if (!glow.classList.contains('visible')) glow.classList.add('visible');
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      document.addEventListener('mouseleave', function() {
+        glow.classList.remove('visible');
+      });
+
+      // Card spotlight + 3D tilt
+      document.addEventListener('mousemove', function(e) {
+        var cards = document.querySelectorAll('.card');
+        cards.forEach(function(card) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+
+          // Update spotlight position
+          card.style.setProperty('--mouse-x', x + 'px');
+          card.style.setProperty('--mouse-y', y + 'px');
+
+          // 3D tilt: calculate rotation based on mouse position relative to card center
+          if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+            var centerX = rect.width / 2;
+            var centerY = rect.height / 2;
+            var rotateY = ((x - centerX) / centerX) * 4;
+            var rotateX = ((centerY - y) / centerY) * 4;
+            card.style.setProperty('--rotate-x', rotateX + 'deg');
+            card.style.setProperty('--rotate-y', rotateY + 'deg');
+          } else {
+            card.style.setProperty('--rotate-x', '0deg');
+            card.style.setProperty('--rotate-y', '0deg');
+          }
+        });
+      });
+    })();
   </script>
 
 </body>
