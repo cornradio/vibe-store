@@ -28,6 +28,50 @@
       --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
     }
 
+    /* Light mode */
+    [data-theme="light"] {
+      --bg: #f5f3f7;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --card-border: rgba(120, 80, 200, 0.2);
+      --card-hover-border: rgba(220, 60, 150, 0.4);
+      --card-hover-glow: rgba(220, 60, 150, 0.1);
+      --text: #1a1525;
+      --text-dim: #55506a;
+      --text-muted: #8a82a0;
+      --accent-purple: #8b5cf6;
+      --accent-pink: #ec4899;
+      --accent-cyan: #0891b2;
+      --tag-bg: rgba(120, 80, 200, 0.08);
+      --tag-border: rgba(120, 80, 200, 0.2);
+      --tag-text: #7c3aed;
+      --input-bg: rgba(255, 255, 255, 0.95);
+      --radius: 12px;
+    }
+
+    [data-theme="light"] body::before {
+      background:
+        linear-gradient(rgba(120, 80, 200, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 80, 200, 0.06) 1px, transparent 1px);
+    }
+
+    [data-theme="light"] header {
+      background: rgba(245, 243, 247, 0.85);
+      border-bottom-color: rgba(120, 80, 200, 0.1);
+    }
+
+    [data-theme="light"] .card:hover {
+      box-shadow: 0 8px 32px rgba(120, 80, 200, 0.15);
+    }
+
+    [data-theme="light"] .modal {
+      background: #fff;
+      border-color: rgba(120, 80, 200, 0.2);
+    }
+
+    [data-theme="light"] .modal-overlay {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -50,24 +94,6 @@
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
-    }
-
-    /* Scanline */
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-pink), transparent);
-      animation: scanline 4s ease-in-out infinite;
-      pointer-events: none;
-      z-index: 999;
-    }
-
-    @keyframes scanline {
-      0% { transform: translateY(0); opacity: 0.6; }
-      50% { transform: translateY(100vh); opacity: 0.3; }
-      100% { transform: translateY(0); opacity: 0.6; }
     }
 
     .container {
@@ -173,6 +199,36 @@
       border-color: #22c55e;
       color: #22c55e;
     }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      background: transparent;
+      color: var(--text-dim);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent-purple);
+      color: var(--accent-purple);
+      background: rgba(120, 80, 200, 0.08);
+    }
+
+    /* Dark mode (default): show moon icon, hide sun */
+    .theme-icon-light { display: none; }
+    .theme-icon-dark { display: block; }
+
+    /* Light mode: show sun icon, hide moon */
+    [data-theme="light"] .theme-icon-light { display: block; }
+    [data-theme="light"] .theme-icon-dark { display: none; }
 
     /* Hero */
     .hero {
@@ -765,6 +821,10 @@
           </div>
         </div>
         <div class="header-btns">
+          <button class="theme-toggle" id="theme-toggle" title="Toggle dark/light mode">
+            <svg class="theme-icon-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-icon-light" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
           <button class="ai-prompt-btn" id="ai-prompt-btn" title="Copy a prompt you can paste into any AI agent to auto-submit apps">AI Submit</button>
           <a id="submit-btn" href="#" target="_blank" rel="noopener" class="submit-btn">+ Submit App</a>
         </div>
@@ -826,6 +886,25 @@
     }
 
     var repoInfo = detectRepo();
+
+    // --- Theme Toggle ---
+    (function() {
+      var savedTheme = localStorage.getItem('vibe-store-theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      var toggle = document.getElementById('theme-toggle');
+      toggle.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        if (current === 'light') {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('vibe-store-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('vibe-store-theme', 'light');
+        }
+      });
+    })();
 
     document.getElementById('submit-btn').href =
       'https://github.com/' + repoInfo.full + '/issues/new?template=submit-app.md&labels=app-submission';
