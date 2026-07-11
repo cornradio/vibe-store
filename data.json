@@ -1,5 +1,16 @@
 [
   {
+    "name": "lightspeed UI",
+    "tagline": "windows app launcher",
+    "logo": "https://github.com/user-attachments/assets/8178c5f8-8370-42ec-94de-cb17da2c54ef",
+    "url": "https://lightspeed.cornradio.org/",
+    "tags": [
+      "#windows",
+      "#launcher"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/12"
+  },
+  {
     "name": "Navi Overlay",
     "tagline": "在 Android 12+ 挖孔屏/刘海屏的设备上，在屏幕底部绘制一条遮罩，与顶部系统状态栏（挖孔/刘海隐藏后）形成视觉对称，并支持显示部分系统信息。专为无法接受挖孔屏、开启\"隐藏屏幕刘海\"后觉得头重脚低不对称不舒服的用户设计。",
     "logo": "https://raw.githubusercontent.com/Sanotsu/navi-overlay/refs/heads/main/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
