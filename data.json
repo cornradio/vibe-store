@@ -2,7 +2,7 @@
   {
     "name": "极简翻墙客户端(壳) MDPC my-dream-proxy-client",
     "tagline": "极简翻墙客户端(壳) 后端基于go 前端基于HTML",
-    "logo": "https://private-user-images.githubusercontent.com/665889/604937675-bb1183c2-b86a-4efa-a63d-7a00de64c345.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODM3MzAwNTMsIm5iZiI6MTc4MzcyOTc1MywicGF0aCI6Ii82NjU4ODkvNjA0OTM3Njc1LWJiMTE4M2MyLWI4NmEtNGVmYS1hNjNkLTdhMDBkZTY0YzM0NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwNzExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDcxMVQwMDI5MTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zOWVhMDRjMmJmNDBmMmY3YWFiZjNlMTM0ODllYWYzMmY5MjdhZDBmNGE1MWE1YjJiMDU0YmE4MWVhNGNhNjk0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.bPHnADzHzeFQb5UpLy6XPQ8Spntq1PNPIoeAtioU-ww",
+    "logo": "https://github.com/user-attachments/assets/4fdcd4ac-d423-4ee8-9114-0256230c1458",
     "url": "https://github.com/crazypeace/my-dream-proxy-client/",
     "tags": [
       "#tool"
