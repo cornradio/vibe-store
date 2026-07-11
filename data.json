@@ -1,5 +1,15 @@
 [
   {
+    "name": "MDPC my-dream-proxy-client",
+    "tagline": "极简翻墙客户端(壳) 后端基于go 前端基于HTML",
+    "logo": "https://github.com/user-attachments/assets/4fdcd4ac-d423-4ee8-9114-0256230c1458",
+    "url": "https://github.com/crazypeace/my-dream-proxy-client/",
+    "tags": [
+      "#tool"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/10"
+  },
+  {
     "name": "lightspeed UI",
     "tagline": "windows app launcher",
     "logo": "https://github.com/user-attachments/assets/8178c5f8-8370-42ec-94de-cb17da2c54ef",
@@ -20,16 +30,6 @@
       "#navigation-apps"
     ],
     "source_issue": "https://github.com/cornradio/vibe-store/issues/11"
-  },
-  {
-    "name": "极简翻墙客户端(壳) MDPC my-dream-proxy-client",
-    "tagline": "极简翻墙客户端(壳) 后端基于go 前端基于HTML",
-    "logo": "https://github.com/user-attachments/assets/4fdcd4ac-d423-4ee8-9114-0256230c1458",
-    "url": "https://github.com/crazypeace/my-dream-proxy-client/",
-    "tags": [
-      "#tool"
-    ],
-    "source_issue": "https://github.com/cornradio/vibe-store/issues/10"
   },
   {
     "name": "Octavia Cambiare",
