@@ -1,5 +1,19 @@
 [
   {
+    "name": "Parti",
+    "tagline": "Create and play multiplayer interactive rooms with friends—write HTML/JS, invite via link or QR.",
+    "logo": "https://parti.linkai.work/icon-512.png",
+    "url": "https://parti.linkai.work/",
+    "tags": [
+      "#tool",
+      "#game",
+      "#creative",
+      "#interactive",
+      "#utility"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/14"
+  },
+  {
     "name": "MDPC my-dream-proxy-client",
     "tagline": "极简翻墙客户端(壳) 后端基于go 前端基于HTML",
     "logo": "https://github.com/user-attachments/assets/70f624e4-ce73-4202-b43b-47eb09cb5c96",
