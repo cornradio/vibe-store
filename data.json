@@ -1,5 +1,16 @@
 [
   {
+    "name": "PaperTodo",
+    "tagline": "windows 的闪念胶囊和桌面便签",
+    "logo": "https://github.com/user-attachments/assets/7a82c871-bb9e-487e-af11-c7e56715defb",
+    "url": "https://github.com/snownico0722/PaperTodo",
+    "tags": [
+      "#tool",
+      "#notes"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/16"
+  },
+  {
     "name": "MacOS-TSKMGR",
     "tagline": "Macos 上的 Windows 风格 资源管理器。",
     "logo": "https://github.com/user-attachments/assets/0eb38592-9845-457e-b6e8-a2a36af20079",
