@@ -1,5 +1,17 @@
 [
   {
+    "name": "MacOS-TSKMGR",
+    "tagline": "Macos 上的 Windows 风格 资源管理器。",
+    "logo": "https://github.com/user-attachments/assets/0eb38592-9845-457e-b6e8-a2a36af20079",
+    "url": "https://github.com/JOHN-decm/MacOS-TSKMGR",
+    "tags": [
+      "#tool",
+      "#utility",
+      "#macos"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/15"
+  },
+  {
     "name": "Parti",
     "tagline": "Create and play multiplayer interactive rooms with friends—write HTML/JS, invite via link or QR.",
     "logo": "https://parti.linkai.work/icon-512.png",
