@@ -2,7 +2,7 @@
   {
     "name": "DataNexa",
     "tagline": "DataNexa: Local desktop MCP server for secure, read-only access to SQLite, MySQL, and PostgreSQL databases from AI agents.",
-    "logo": "https://github.com/MingoZacwu/DataNexa/blob/main/resources/icon.png",
+    "logo": "https://raw.githubusercontent.com/MingoZacwu/DataNexa/refs/heads/main/resources/icon.png",
     "url": "https://github.com/MingoZacwu/DataNexa",
     "tags": [
       "#tool",
