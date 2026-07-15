@@ -1,5 +1,17 @@
 [
   {
+    "name": "DataNexa",
+    "tagline": "DataNexa: Local desktop MCP server for secure, read-only access to SQLite, MySQL, and PostgreSQL databases from AI agents.",
+    "logo": "https://github.com/MingoZacwu/DataNexa/blob/main/resources/icon.png",
+    "url": "https://github.com/MingoZacwu/DataNexa",
+    "tags": [
+      "#tool",
+      "#mcp",
+      "#database"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/17"
+  },
+  {
     "name": "PaperTodo",
     "tagline": "windows 的闪念胶囊和桌面便签",
     "logo": "https://github.com/user-attachments/assets/7a82c871-bb9e-487e-af11-c7e56715defb",
