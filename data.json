@@ -1,5 +1,18 @@
 [
   {
+    "name": "q-code",
+    "tagline": "A command-line AI agent framework with a local web dashboard, persistent task graphs, project memory, subagents, and MCP integrations.",
+    "logo": "https://raw.githubusercontent.com/v833/q-code/main/docs/public/q-code-duck-round-128.png",
+    "url": "https://q-code.wq1115.com/",
+    "tags": [
+      "#tool",
+      "#AI",
+      "#utility",
+      "#interactive"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/18"
+  },
+  {
     "name": "DataNexa",
     "tagline": "DataNexa: Local desktop MCP server for secure, read-only access to SQLite, MySQL, and PostgreSQL databases from AI agents.",
     "logo": "https://raw.githubusercontent.com/MingoZacwu/DataNexa/refs/heads/main/resources/icon.png",
