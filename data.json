@@ -1,5 +1,24 @@
 [
   {
+    "name": "Mansion of Secrets",
+    "tagline": "Multiplayer Online Competitive Survival Game playable in browser.",
+    "logo": "https://github.com/user-attachments/assets/c8c1a144-819b-425b-a303-0a14997788c9",
+    "url": "https://mansionofsecrets.com/",
+    "tags": [
+      "#game",
+      "#multiplayer",
+      "#horror",
+      "#survivalgame",
+      "#browsergame",
+      "#hiddeninfo",
+      "#boardgame",
+      "#hunter",
+      "#sabotage",
+      "#socialdeduction"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/19"
+  },
+  {
     "name": "q-code",
     "tagline": "A command-line AI agent framework with a local web dashboard, persistent task graphs, project memory, subagents, and MCP integrations.",
     "logo": "https://raw.githubusercontent.com/v833/q-code/main/docs/public/q-code-duck-round-128.png",
