@@ -3,6 +3,19 @@
     "name": "TarotDivineBot",
     "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.",
     "logo": "https://github.com/user-attachments/assets/e0ad8a86-f787-4ba7-9f31-16da39049c2c",
+    "url": "https://t.me/TarotDivineBot",
+    "tags": [
+      "#tool",
+      "#game",
+      "#AI",
+      "#telegram"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/20"
+  },
+  {
+    "name": "TarotDivineBot",
+    "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.",
+    "logo": "https://github.com/user-attachments/assets/e0ad8a86-f787-4ba7-9f31-16da39049c2c",
     "url": "[t.me/TarotDivineBot](https://t.me/TarotDivineBot)",
     "tags": [
       "#tool",
