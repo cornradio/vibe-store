@@ -1,44 +1,5 @@
 [
   {
-    "name": "TarotDivineBot",
-    "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.",
-    "logo": "https://github.com/user-attachments/assets/e0ad8a86-f787-4ba7-9f31-16da39049c2c",
-    "url": "https://t.me/TarotDivineBot",
-    "tags": [
-      "#tool",
-      "#game",
-      "#AI",
-      "#telegram"
-    ],
-    "source_issue": "https://github.com/cornradio/vibe-store/issues/20"
-  },
-  {
-    "name": "TarotDivineBot",
-    "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.",
-    "logo": "https://github.com/user-attachments/assets/e0ad8a86-f787-4ba7-9f31-16da39049c2c",
-    "url": "[t.me/TarotDivineBot](https://t.me/TarotDivineBot)",
-    "tags": [
-      "#tool",
-      "#game",
-      "#AI",
-      "#telegram"
-    ],
-    "source_issue": "https://github.com/cornradio/vibe-store/issues/20"
-  },
-  {
-    "name": "TarotDivineBot",
-    "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.\n\n<img width=\"356\" height=\"385\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/2c5b6b0e-0145-4ee1-9f9d-13b93bb0b846\" />",
-    "logo": "https://github.com/user-attachments/assets/2c5b6b0e-0145-4ee1-9f9d-13b93bb0b846",
-    "url": "t.me/TarotDivineBot",
-    "tags": [
-      "#tool",
-      "#game",
-      "#AI",
-      "#telegram"
-    ],
-    "source_issue": "https://github.com/cornradio/vibe-store/issues/20"
-  },
-  {
     "name": "Mansion of Secrets",
     "tagline": "Multiplayer Online Competitive Survival Game playable in browser.",
     "logo": "https://github.com/user-attachments/assets/c8c1a144-819b-425b-a303-0a14997788c9",
