@@ -1,5 +1,18 @@
 [
   {
+    "name": "TarotDivineBot",
+    "tagline": "A Tarot Divine Bot on telegram.\n\nYou can inline type @TarotDivineBot in telegram Write a message to show user interface.",
+    "logo": "https://github.com/user-attachments/assets/e0ad8a86-f787-4ba7-9f31-16da39049c2c",
+    "url": "https://t.me/TarotDivineBot",
+    "tags": [
+      "#tool",
+      "#game",
+      "#AI",
+      "#telegram"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/20"
+  },
+  {
     "name": "Mansion of Secrets",
     "tagline": "Multiplayer Online Competitive Survival Game playable in browser.",
     "logo": "https://github.com/user-attachments/assets/c8c1a144-819b-425b-a303-0a14997788c9",
