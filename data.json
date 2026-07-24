@@ -1,5 +1,16 @@
 [
   {
+    "name": "rightmenu",
+    "tagline": "在 Finder 里点一下右键，即可新建文件、复制路径和隐藏桌面项目。",
+    "logo": "https://github.com/user-attachments/assets/2667b963-861a-44d0-afa4-9a635471f501",
+    "url": "https://superoutman.sol.build/rightmenu/",
+    "tags": [
+      "#tool",
+      "#macos"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/22"
+  },
+  {
     "name": "vlaina",
     "tagline": "一个笔记工具",
     "logo": "https://github.com/user-attachments/assets/374deffc-5ea4-4544-af30-bb5baf6acfd2",
