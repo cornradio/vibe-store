@@ -1,5 +1,16 @@
 [
   {
+    "name": "灰度节点游戏场",
+    "tagline": "各种好玩的在线小游戏！",
+    "logo": "https://github.com/user-attachments/assets/db9fb7fc-603d-4bfe-9b8c-72654d2d542c",
+    "url": "https://dsgames-exm.pages.dev/",
+    "tags": [
+      "#game",
+      "#art"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/23"
+  },
+  {
     "name": "rightmenu",
     "tagline": "在 Finder 里点一下右键，即可新建文件、复制路径和隐藏桌面项目。",
     "logo": "https://github.com/user-attachments/assets/2667b963-861a-44d0-afa4-9a635471f501",
