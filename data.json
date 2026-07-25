@@ -1,5 +1,17 @@
 [
   {
+    "name": "Ghost Downloader 3",
+    "tagline": "A lightweight multi-threaded download manager with resume support and a clean GUI.",
+    "logo": "https://github.com/user-attachments/assets/ed42137d-7fd5-48eb-a2c4-3c9154079285",
+    "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+    "tags": [
+      "#tool",
+      "#utility",
+      "#experiment"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/24"
+  },
+  {
     "name": "灰度节点游戏场",
     "tagline": "各种好玩的在线小游戏！",
     "logo": "https://github.com/user-attachments/assets/db9fb7fc-603d-4bfe-9b8c-72654d2d542c",
