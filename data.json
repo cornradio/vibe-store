@@ -1,5 +1,15 @@
 [
   {
+    "name": "shigure  时雨",
+    "tagline": "在线番茄钟",
+    "logo": "https://github.com/user-attachments/assets/dee3889d-fdad-49a4-b4dd-23cf6ced625a",
+    "url": "https://hoochanlon.github.io/shigure/",
+    "tags": [
+      "#tool"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/25"
+  },
+  {
     "name": "Ghost Downloader 3",
     "tagline": "A lightweight multi-threaded download manager with resume support and a clean GUI.",
     "logo": "https://github.com/user-attachments/assets/ed42137d-7fd5-48eb-a2c4-3c9154079285",
