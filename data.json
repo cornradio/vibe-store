@@ -1,5 +1,16 @@
 [
   {
+    "name": "ghostproxifier",
+    "tagline": "win proxy tool like proxifier",
+    "logo": "https://github.com/user-attachments/assets/d5b5d9af-0d4f-4746-ae06-36a6a17a5675",
+    "url": "https://ghostproxifier.com/",
+    "tags": [
+      "#tool",
+      "#Proxy"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/26"
+  },
+  {
     "name": "shigure  时雨",
     "tagline": "在线番茄钟",
     "logo": "https://github.com/user-attachments/assets/dee3889d-fdad-49a4-b4dd-23cf6ced625a",
