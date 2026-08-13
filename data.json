@@ -1,5 +1,17 @@
 [
   {
+    "name": "moeka",
+    "tagline": "rust markdown editor",
+    "logo": "https://github.com/user-attachments/assets/b1515b97-3eb6-4c29-af59-f2d39073e49b",
+    "url": "https://moeka.app/en",
+    "tags": [
+      "#tool",
+      "#note",
+      "#rust"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/27"
+  },
+  {
     "name": "ghostproxifier",
     "tagline": "win proxy tool like proxifier",
     "logo": "https://github.com/user-attachments/assets/d5b5d9af-0d4f-4746-ae06-36a6a17a5675",
