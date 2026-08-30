@@ -1,5 +1,22 @@
 [
   {
+    "name": "Jianghu: Sword & Zither",
+    "tagline": "Jianghu: Sword & Zither, a Wuxia-inspired roguelite where instead of using a sword, the player wields an ancient instrument, freely controlling their strokes and speed to experience real musical expression in combat.",
+    "logo": "https://wuxiascrub.github.io/qinjianjianghu_support/assets/images/android_feature.png",
+    "url": "https://wuxiascrub.github.io/qinjianjianghu_support/",
+    "tags": [
+      "#game",
+      "#mobilegame",
+      "#roguelite",
+      "#roguelike",
+      "#wuxia",
+      "#action",
+      "#Chinese",
+      "#fighting"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/29"
+  },
+  {
     "name": "moeka",
     "tagline": "rust markdown editor",
     "logo": "https://github.com/user-attachments/assets/b1515b97-3eb6-4c29-af59-f2d39073e49b",
