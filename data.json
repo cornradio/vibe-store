@@ -1,5 +1,17 @@
 [
   {
+    "name": "China AI Arbitrage",
+    "tagline": "A multilingual comparison hub for Chinese AI coding plans, API prices, and free-token deals — find the cheapest way to use DeepSeek, Qwen, Kimi, GLM and more.",
+    "logo": "https://www.china-ai-arbitrage.xyz/assets/og-image.jpg",
+    "url": "https://www.china-ai-arbitrage.xyz",
+    "tags": [
+      "#tool",
+      "#AI",
+      "#utility"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/32"
+  },
+  {
     "name": "With My Eyes",
     "tagline": "A curated China travel guide built straight from Chinese platforms — handpicked Bilibili travel vlogs, street-food and hiking guides, and high-speed-rail tips for foreign travelers, in 9 languages.",
     "logo": "https://chinatravel.world/favicon.svg",
