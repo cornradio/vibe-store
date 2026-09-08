@@ -1,5 +1,17 @@
 [
   {
+    "name": "BioAI Nav",
+    "tagline": "The discovery layer of the BioAI ecosystem - a bilingual (English/Chinese) directory of 110+ AI tools, models, agents, datasets, awesome lists and learning resources for biology and biotech.",
+    "logo": "https://bioainav.aiworkagent.org/favicon.svg",
+    "url": "https://bioainav.aiworkagent.org",
+    "tags": [
+      "#tool",
+      "#AI",
+      "#utility"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/36"
+  },
+  {
     "name": "林意 LINYI",
     "tagline": "A bilingual (中文/EN) online magazine with print-grade typography — masthead, drop caps, two-column layout, pull quotes, seal red — that typesets full-article share cards right in your browser.",
     "logo": "https://image.thum.io/get/width/1000/crop/750/https://linyi.cdqyfdbymn.me",
