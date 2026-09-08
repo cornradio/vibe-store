@@ -1,5 +1,18 @@
 [
   {
+    "name": "林意 LINYI",
+    "tagline": "A bilingual (中文/EN) online magazine with print-grade typography — masthead, drop caps, two-column layout, pull quotes, seal red — that typesets full-article share cards right in your browser.",
+    "logo": "https://image.thum.io/get/width/1000/crop/750/https://linyi.cdqyfdbymn.me",
+    "url": "https://linyi.cdqyfdbymn.me",
+    "tags": [
+      "#creative",
+      "#retro",
+      "#interactive",
+      "#reading"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/35"
+  },
+  {
     "name": "AI Agent八股",
     "tagline": "631 道 AI Agent 真题 × 623 张动漫图解的中文面试备战站——从 LLM 基础一路覆盖到 RAG、多模态 Agent 与 MCP，看得懂才记得住、说得出。",
     "logo": "https://ai-interview-guide.cdqyfdbymn.me/pwa-512.png",
