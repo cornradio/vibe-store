@@ -1,5 +1,17 @@
 [
   {
+    "name": "With My Eyes",
+    "tagline": "A curated China travel guide built straight from Chinese platforms — handpicked Bilibili travel vlogs, street-food and hiking guides, and high-speed-rail tips for foreign travelers, in 9 languages.",
+    "logo": "https://chinatravel.world/favicon.svg",
+    "url": "https://chinatravel.world",
+    "tags": [
+      "#tool",
+      "#utility",
+      "#creative"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/31"
+  },
+  {
     "name": "蓝色大肥鱼导航",
     "tagline": "查看蓝色大肥鱼表情包",
     "logo": "https://github.com/user-attachments/assets/5035a1df-72ec-4383-9e28-5f12f5ac353b",
