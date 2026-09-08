@@ -1,5 +1,18 @@
 [
   {
+    "name": "AI Agent八股",
+    "tagline": "631 道 AI Agent 真题 × 623 张动漫图解的中文面试备战站——从 LLM 基础一路覆盖到 RAG、多模态 Agent 与 MCP，看得懂才记得住、说得出。",
+    "logo": "https://ai-interview-guide.cdqyfdbymn.me/pwa-512.png",
+    "url": "https://ai-interview-guide.cdqyfdbymn.me",
+    "tags": [
+      "#tool",
+      "#AI",
+      "#utility",
+      "#interactive"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/33"
+  },
+  {
     "name": "China AI Arbitrage",
     "tagline": "A multilingual comparison hub for Chinese AI coding plans, API prices, and free-token deals — find the cheapest way to use DeepSeek, Qwen, Kimi, GLM and more.",
     "logo": "https://www.china-ai-arbitrage.xyz/favicon.svg",
