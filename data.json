@@ -1,5 +1,16 @@
 [
   {
+    "name": "AI Work 教程网",
+    "tagline": "办公 AI 工作台中文教程站：WorkBuddy / TraeWork / QoderWork / 豆包工作，从上手到进阶",
+    "logo": "https://image.thum.io/get/width/1000/crop/750/https://www.aiworkagent.org",
+    "url": "https://www.aiworkagent.org",
+    "tags": [
+      "#AI",
+      "#tool"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/40"
+  },
+  {
     "name": "Open Tavern",
     "tagline": "私密 AI 角色扮演站：创建并扮演你自己的 AI 角色（RoleChat AI）",
     "logo": "https://www.rolechatai.com/favicon.ico",
