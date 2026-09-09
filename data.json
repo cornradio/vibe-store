@@ -1,5 +1,16 @@
 [
   {
+    "name": "DSH Meme Hub",
+    "tagline": "DeepSeek Harness (dsh) 社区插件策展导航：只挑好用的和好玩的",
+    "logo": "https://image.thum.io/get/width/1000/crop/750/https://dsh-meme-hub.cdqyfdbymn.me",
+    "url": "https://dsh-meme-hub.cdqyfdbymn.me",
+    "tags": [
+      "#AI",
+      "#tool"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/45"
+  },
+  {
     "name": "AI Work 教程网",
     "tagline": "办公 AI 工作台中文教程站：WorkBuddy / TraeWork / QoderWork / 豆包工作，从上手到进阶",
     "logo": "https://image.thum.io/get/width/1000/crop/750/https://www.aiworkagent.org",
