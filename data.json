@@ -1,5 +1,16 @@
 [
   {
+    "name": "Open Tavern",
+    "tagline": "私密 AI 角色扮演站：创建并扮演你自己的 AI 角色（RoleChat AI）",
+    "logo": "https://www.rolechatai.com/favicon.ico",
+    "url": "https://open-tavern.vercel.app",
+    "tags": [
+      "#AI",
+      "#interactive"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/38"
+  },
+  {
     "name": "Hextech ARAM Guide",
     "tagline": "A 12-language League of Legends ARAM (Hextech Augments) guide that aggregates win rates, item builds, and augment picks from three data sources, auto-updated nightly.",
     "logo": "https://aramkit.cdqyfdbymn.me/assets/favicon.svg",
