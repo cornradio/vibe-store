@@ -1,5 +1,18 @@
 [
   {
+    "name": "FORMWEFT Motion Workbench",
+    "tagline": "Edit existing SRT subtitles into animated video captions and information cards in your browser.",
+    "logo": "https://formweft.com/assets/brand/formweft-icon.svg",
+    "url": "https://formweft.com/tools/motion-workbench/",
+    "tags": [
+      "#tool",
+      "#creative",
+      "#utility",
+      "#interactive"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/46"
+  },
+  {
     "name": "DSH Meme Hub",
     "tagline": "DeepSeek Harness (dsh) 社区插件策展导航：只挑好用的和好玩的",
     "logo": "https://image.thum.io/get/width/1000/crop/750/https://dsh-meme-hub.cdqyfdbymn.me",
