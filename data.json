@@ -1,5 +1,15 @@
 [
   {
+    "name": "VibeApp-50",
+    "tagline": "A mysterious app radiating unique vibes.",
+    "logo": "",
+    "url": "",
+    "tags": [
+      "#vibe"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/50"
+  },
+  {
     "name": "Mini Golf Cost Calculator",
     "tagline": "Estimate mini golf round, birthday party, and group outing costs from your own prices.",
     "logo": "https://minigolfspots.com/images/logo.svg",
