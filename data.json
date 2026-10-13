@@ -1,5 +1,24 @@
 [
   {
+    "name": "The Internet Square",
+    "tagline": "A playable internet city where you can meet people, network with creators and brands, customize your citizen, hang out in apartments, watch videos together, and outbid others for a billboard.",
+    "logo": "https://www.google.com/s2/favicons?domain=theinternetsquare.com&sz=128",
+    "url": "https://theinternetsquare.com/",
+    "tags": [
+      "#game",
+      "#social",
+      "#networking",
+      "#creative",
+      "#retro",
+      "#interactive",
+      "#chill",
+      "#pixel-art",
+      "#explore",
+      "#music"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/51"
+  },
+  {
     "name": "VibeApp-50",
     "tagline": "A mysterious app radiating unique vibes.",
     "logo": "",
