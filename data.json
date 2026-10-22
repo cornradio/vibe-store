@@ -1,5 +1,18 @@
 [
   {
+    "name": "MemeBako",
+    "tagline": "An HD watermark-free meme collection and online meme maker — dedicated archives for Gugugaga the penguin and Nailong the dragon, with one-click copy and no login.",
+    "logo": "https://www.memebako.com/favicon.svg",
+    "url": "https://www.memebako.com",
+    "tags": [
+      "#meme",
+      "#fun",
+      "#tool",
+      "#image"
+    ],
+    "source_issue": "https://github.com/cornradio/vibe-store/issues/52"
+  },
+  {
     "name": "The Internet Square",
     "tagline": "A playable internet city where you can meet people, network with creators and brands, customize your citizen, hang out in apartments, watch videos together, and outbid others for a billboard.",
     "logo": "https://www.google.com/s2/favicons?domain=theinternetsquare.com&sz=128",
